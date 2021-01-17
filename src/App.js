@@ -13,39 +13,20 @@ import Home from './Pages/Home';
 
 const App = () => (
   <Router>
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/step-1">Step 1</Link>
-          </li>
-          <li>
-            <Link to="/step-2">Step 2</Link>
-          </li>
-          <li>
-            <Link to="/step-3">Step 3</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <Switch>
-        <Route path="/step-1">
-          <Step1 />
-        </Route>
-        <Route path="/step-2">
-          <Step2 />
-        </Route>
-        <Route path="/step-3">
-          <Step3 />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </div>
+    <Switch>
+      <Route path="/step-1">
+        <Step1 />
+      </Route>
+      <Route path="/step-2">
+        <Step2 />
+      </Route>
+      <Route path="/step-3">
+        <Step3 />
+      </Route>
+      <Route path="/">
+        <Home />
+      </Route>
+    </Switch>
   </Router>
 );
 
