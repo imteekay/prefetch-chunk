@@ -1,13 +1,9 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-export const StepPrefetcher = {
-  prefetch: () => import(/* webpackPrefetch: true */ 'Pages/Step1/Step1'),
-};
-
 const Home = () => {
   useEffect(() => {
-    StepPrefetcher.prefetch();
+    import(/* webpackPrefetch: true */ 'Pages/Step1/Step1');
   }, []);
 
   return (
